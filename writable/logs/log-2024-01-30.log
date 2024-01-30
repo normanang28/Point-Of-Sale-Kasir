@@ -1,0 +1,76 @@
+CRITICAL - 2024-01-30 01:52:28 --> Class 'App\Models\M_model' not found
+#0 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\Data_Master->petugas()
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data_Master))
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+ERROR - 2024-01-30 01:54:41 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+CRITICAL - 2024-01-30 01:54:41 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+#0 C:\xampp\htdocs\POS_UKK\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\POS_UKK\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\POS_UKK\app\Models\M_model.php(8): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\POS_UKK\app\Controllers\Data_Master.php(13): App\Models\M_model->JOIN_01('petugas', 'user', 'petugas.maker_p...', 'tanggal_petugas')
+#4 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\Data_Master->petugas()
+#5 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data_Master))
+#6 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-30 07:26:31 --> syntax error, unexpected '}', expecting end of file
+#0 C:\xampp\htdocs\POS_UKK\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Data_Master/pet...')
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('Data_Master/pet...')
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-30 07:30:11 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\POS_UKK\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\POS_UKK\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\POS_UKK\app\Controllers\Data_Master.php(42): CodeIgniter\Model->__call('simpan', Array)
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\Data_Master->tambah_petugas()
+#4 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data_Master))
+#5 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2024-01-30 07:30:46 --> Column 'maker_petugas' cannot be null
+CRITICAL - 2024-01-30 07:39:17 --> Class 'App\Controllers\M_model' not found
+#0 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-30 07:46:07 --> syntax error, unexpected '}'
+#0 C:\xampp\htdocs\POS_UKK\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\POS_UKK\system\Common.php(1089): CodeIgniter\View\View->render('layout/header', Array, true)
+#2 C:\xampp\htdocs\POS_UKK\app\Controllers\Data_Master.php(21): view('layout/header', Array)
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\Data_Master->petugas()
+#4 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data_Master))
+#5 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-30 07:46:13 --> syntax error, unexpected ')'
+#0 C:\xampp\htdocs\POS_UKK\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\POS_UKK\system\Common.php(1089): CodeIgniter\View\View->render('layout/header', Array, true)
+#2 C:\xampp\htdocs\POS_UKK\app\Controllers\Data_Master.php(21): view('layout/header', Array)
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\Data_Master->petugas()
+#4 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data_Master))
+#5 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-30 07:46:17 --> syntax error, unexpected ')'
+#0 C:\xampp\htdocs\POS_UKK\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\POS_UKK\system\Common.php(1089): CodeIgniter\View\View->render('layout/header', Array, true)
+#2 C:\xampp\htdocs\POS_UKK\app\Controllers\Data_Master.php(21): view('layout/header', Array)
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\Data_Master->petugas()
+#4 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data_Master))
+#5 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
