@@ -37,11 +37,6 @@
             <li><a href="<?= base_url('/Laporan/pengeluaran_barang')?>">Pengeluaran Barang</a></li>
         </ul>
         </li>
-        <li><a href="<?= base_url('/Laporan/income')?>" class="ai-icon" aria-expanded="false">
-                <i class="fa-solid fa-sack-dollar" title="Laporan Income"></i>
-                <span  class="nav-text">Laporan Income</span>
-            </a>
-        </li>
         <hr class="sidebar-divider">
         <li><a href="<?= base_url('/My_Account')?>" class="ai-icon" aria-expanded="false">
             <i class="fa-solid fa-user-secret" title="My Account"></i>
