@@ -1,3 +1,14 @@
+<style>
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-container a {
+    margin-right: 10px; 
+}
+</style>
 <div class="col-12">
 	<div class="card">
 		<div class="card-body">
@@ -86,7 +97,7 @@
                                 <?php } ?>
                             </td>
 							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->username?> / <?php echo $dataa->tanggal_petugas?></td>
-							<td class="d-flex justify-content-between">
+							<td class="button-container">
                                 <?php if($dataa->status == '1'): ?>
                                     <a href="<?= base_url('/Data_Master/tidak_aktif/'.$dataa->id_user_petugas)?>">
                                         <button class="btn btn-warning"><i class="fa-solid fa-user-xmark"></i></button>
@@ -98,13 +109,40 @@
                                 <?php endif; ?>
 
                                 <a href="<?= base_url('/Data_Master/edit_petugas/'.$dataa->id_user_petugas)?>"><button class="btn btn-warning"><i class="fa-regular fa-pen-to-square"></i></button></a>
-                                <a href="<?= base_url('/Data_Master/hapus_petugas/'.$dataa->id_user_petugas)?>"><button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button></a>
+                                <a onclick="openDeleteModal('<?= base_url('/Data_Master/hapus_petugas/'.$dataa->id_user_petugas)?>')">
+								    <button type="button" class="btn btn-danger">
+								        <i class="fa-solid fa-trash"></i>
+								    </button>
+								</a>
                             </td>
+                            <div class="modal fade" id="delete_petugas" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+							    <div class="modal-dialog modal-dialog-centered" role="document">
+							        <div class="modal-content">
+							            <div class="modal-header">
+							                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+							            </div>
+							            <div class="modal-body text-center">
+							                <i class="fa-solid fa-triangle-exclamation" style="font-size: 80px; color: #FFA500;"></i>
+							                <h1></h1><br>
+							                <h5>Apakah anda yakin ingin menghapus data ini?</h5>
+							            </div>
+							            <div class="modal-footer">
+							                <button type="button" class="btn btn-secondary light" data-bs-dismiss="modal">Kembali</button>
+							                <a id="deleteLinkPetugas" href="#">
+							                    <button type="button" class="btn btn-danger">Iya, Hapus</button>
+							                </a>
+							            </div>
+							        </div>
+							    </div>
+							</div>
+							<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+							<script>
+							    function openDeleteModal(deleteLink) {
+							        document.getElementById('deleteLinkPetugas').href = deleteLink;
+							        $('#delete_petugas').modal('show');
+							    }
+							</script>
                             <style>
-							.btn {
-							    margin-right: 5px; 
-							}
-
 							@keyframes blink {
 			                    0% { opacity: 1; }
 			                    50% { opacity: 0; }

@@ -1,0 +1,160 @@
+CRITICAL - 2024-01-31 00:26:23 --> Invalid file: POS/barang/edit_barang.php
+#0 C:\xampp\htdocs\POS_UKK\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('POS/barang/edit...')
+#1 C:\xampp\htdocs\POS_UKK\system\Common.php(1089): CodeIgniter\View\View->render('POS/barang/edit...', Array, true)
+#2 C:\xampp\htdocs\POS_UKK\app\Controllers\POS.php(63): view('POS/barang/edit...')
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\POS->edit_barang('2')
+#4 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POS))
+#5 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-31 00:26:49 --> Invalid file: POS/barang/edit_barang.php
+#0 C:\xampp\htdocs\POS_UKK\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('POS/barang/edit...')
+#1 C:\xampp\htdocs\POS_UKK\system\Common.php(1089): CodeIgniter\View\View->render('POS/barang/edit...', Array, true)
+#2 C:\xampp\htdocs\POS_UKK\app\Controllers\POS.php(63): view('POS/barang/edit...')
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\POS->edit_barang('2')
+#4 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POS))
+#5 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-31 00:28:04 --> Invalid file: POS/barang/edit_barang.php
+#0 C:\xampp\htdocs\POS_UKK\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('POS/barang/edit...')
+#1 C:\xampp\htdocs\POS_UKK\system\Common.php(1089): CodeIgniter\View\View->render('POS/barang/edit...', Array, true)
+#2 C:\xampp\htdocs\POS_UKK\app\Controllers\POS.php(63): view('POS/barang/edit...')
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\POS->edit_barang('2')
+#4 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POS))
+#5 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2024-01-31 06:06:31 --> Unknown column 'barang.maker_bm' in 'on clause'
+CRITICAL - 2024-01-31 06:06:31 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\POS_UKK\app\Controllers\POS.php(101): App\Models\M_model->fusionOderBy('barang', 'user', 'barang.maker_bm...', 'tanggal_bm')
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\POS->pendataan_barang()
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POS))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-31 06:11:51 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\POS_UKK\app\Views\POS\pendataan_barang\pendataan_barang.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 37, Array)
+#1 C:\xampp\htdocs\POS_UKK\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\POS_UKK\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\POS_UKK\system\Common.php(1089): CodeIgniter\View\View->render('POS/pendataan_b...', Array, true)
+#4 C:\xampp\htdocs\POS_UKK\app\Controllers\POS.php(111): view('POS/pendataan_b...')
+#5 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\POS->pendataan_barang()
+#6 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POS))
+#7 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-31 06:12:49 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\POS_UKK\app\Views\POS\pendataan_barang\pendataan_barang.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 37, Array)
+#1 C:\xampp\htdocs\POS_UKK\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\POS_UKK\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\POS_UKK\system\Common.php(1089): CodeIgniter\View\View->render('POS/pendataan_b...', Array, true)
+#4 C:\xampp\htdocs\POS_UKK\app\Controllers\POS.php(111): view('POS/pendataan_b...')
+#5 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\POS->pendataan_barang()
+#6 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POS))
+#7 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2024-01-31 06:20:50 --> Unknown column 'jumlah' in 'field list'
+ERROR - 2024-01-31 06:47:45 --> Table 'pos.kendaraan' doesn't exist
+CRITICAL - 2024-01-31 06:47:45 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\POS_UKK\app\Controllers\Laporan.php(32): App\Models\M_model->filter_invoice('barang_masuk', '', '')
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\Laporan->print_pendataan_barang()
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-31 07:07:28 --> Class 'App\Controllers\Border' not found
+#0 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\Laporan->excel_pendataan_barang()
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-31 07:07:52 --> Cannot use PhpOffice\PhpSpreadsheet\Spreadsheet as Spreadsheet because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-31 07:07:58 --> Call to undefined method PhpOffice\PhpSpreadsheet\Style\Fill::setRgbColor()
+#0 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\Laporan->excel_pendataan_barang()
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-31 07:13:30 --> syntax error, unexpected ','
+#0 C:\xampp\htdocs\POS_UKK\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Laporan/pendata...')
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('Laporan/pendata...')
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-31 07:14:11 --> Class 'App\Controllers\Alignment' not found
+#0 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\Laporan->excel_pendataan_barang()
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-31 07:25:14 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+#0 C:\xampp\htdocs\POS_UKK\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Laporan/pendata...')
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('Laporan/pendata...')
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-31 07:25:51 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+#0 C:\xampp\htdocs\POS_UKK\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Laporan/pendata...')
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('Laporan/pendata...')
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-31 07:26:41 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+#0 C:\xampp\htdocs\POS_UKK\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Laporan/pendata...')
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('Laporan/pendata...')
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-31 07:26:42 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+#0 C:\xampp\htdocs\POS_UKK\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Laporan/pendata...')
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('Laporan/pendata...')
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-31 07:26:42 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+#0 C:\xampp\htdocs\POS_UKK\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Laporan/pendata...')
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('Laporan/pendata...')
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-31 07:26:48 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+#0 C:\xampp\htdocs\POS_UKK\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Laporan/pendata...')
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('Laporan/pendata...')
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-31 07:28:13 --> Class 'App\Controllers\Color' not found
+#0 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\Laporan->excel_pendataan_barang()
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}

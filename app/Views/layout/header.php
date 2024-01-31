@@ -28,7 +28,8 @@
 
 	<link href="vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10"></link>
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10"></link> -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha256-4sPX7kXZKlqvNtJOXxZLMRlq7Uc6sCLQ5Ct7N2Q4y6A=" crossorigin="anonymous" />
 </head>

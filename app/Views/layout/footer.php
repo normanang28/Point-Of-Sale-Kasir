@@ -21,6 +21,8 @@
 <script src="js/plugins-init/datatables.init.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha256-pUGKd9cSgPBy/muAWl4HgeAB6u6HIsAUu6ZnA5T0c50=" crossorigin="anonymous"></script>
+
+<script src="vendor/apexchart/apexchart.js"></script>
 </body>
 
 <style>

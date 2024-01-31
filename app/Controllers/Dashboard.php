@@ -3,6 +3,9 @@
 namespace App\Controllers;
 use CodeIgniter\Controllers;
 use App\Models\M_model;
+use Dompdf\Dompdf;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Dashboard extends BaseController
 {
@@ -10,7 +13,7 @@ class Dashboard extends BaseController
     {
         echo view('layout/header');
         echo view('layout/menu');
-        echo view('view/dashboard/dashboard');
+        echo view('dashboard/dashboard');
         echo view('layout/footer');
     }
 }

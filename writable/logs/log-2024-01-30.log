@@ -74,3 +74,22 @@ CRITICAL - 2024-01-30 07:46:17 --> syntax error, unexpected ')'
 #6 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #7 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #8 {main}
+CRITICAL - 2024-01-30 21:40:39 --> Too few arguments to function App\Controllers\Data_Master::petugas(), 0 passed in C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\Data_Master->petugas()
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data_Master))
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-30 21:40:43 --> Too few arguments to function App\Controllers\Data_Master::petugas(), 0 passed in C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\Data_Master->petugas()
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data_Master))
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+ERROR - 2024-01-30 22:09:57 --> Duplicate entry '08137103525333' for key 'NO_TELP'
+ERROR - 2024-01-30 22:11:10 --> Duplicate entry '08137103525333' for key 'NO_TELP'
+CRITICAL - 2024-01-30 22:14:17 --> Cannot redeclare getLevelText() (previously declared in C:\xampp\htdocs\POS_UKK\app\Views\data_master\petugas.php:91)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}

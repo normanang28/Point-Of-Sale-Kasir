@@ -34,7 +34,7 @@
         </a>
         <ul aria-expanded="false">
             <li><a href="<?= base_url('/Laporan/pendataan_barang')?>">Pendataan Barang</a></li>
-            <li><a href="<?= base_url('/Laporan/pendataan_barang')?>">Pengeluaran Barang</a></li>
+            <li><a href="<?= base_url('/Laporan/pengeluaran_barang')?>">Pengeluaran Barang</a></li>
         </ul>
         </li>
         <li><a href="<?= base_url('/Laporan/income')?>" class="ai-icon" aria-expanded="false">
@@ -43,19 +43,10 @@
             </a>
         </li>
         <hr class="sidebar-divider">
-        <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+        <li><a href="<?= base_url('/My_Account')?>" class="ai-icon" aria-expanded="false">
             <i class="fa-solid fa-user-secret" title="My Account"></i>
-            <span class="nav-text">My Account</span>
-        </a>
-        <ul aria-expanded="false">
-            <li><a href="<?= base_url('/My_Account')?>">My Account</a></li>
-            <li><a href="<?= base_url('/Log_Activity/log_activity')?>">My Log Activity</a></li>
-        </ul>
-        </li>
-        <li><a href="<?= base_url('/Log_Activity/log_activity_user')?>" class="ai-icon" aria-expanded="false">
-            <i class="fa-solid fa-address-book" title="Log Activity User"></i>
-            <span class="nav-text">Log Activity User</span>
-        </a>
+                <span  class="nav-text">My Account</span>
+            </a>
         </li>
         <li><a href="<?= base_url('/Home/logout')?>" class="ai-icon" aria-expanded="false">
             <i class="fa-solid fa-right-from-bracket" title="Log Out"></i>

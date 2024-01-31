@@ -158,14 +158,14 @@ class M_model extends model
 	// 	)->getResult();
 	// }
 
-	public function filter_incoming_items ($table, $awal,$akhir)
+	public function filter_pendataan_barang ($table, $awal,$akhir)
 	{
 		return $this->db->query(
 			"SELECT *
 			FROM ".$table."
-			join barang ON ".$table.".id_masuk_barang = barang.id_barang
-			join user ON ".$table.".maker_barang_masuk = user.id_user
-			WHERE ".$table.".barang_masuk_laporan
+			join barang ON ".$table.".id_barang_barang = barang.id_barang
+			join user ON ".$table.".maker_bm = user.id_user
+			WHERE ".$table.".tgl_bm
 			BETWEEN '".$awal."'
 			AND '".$akhir."'"
 		)->getResult();
