@@ -35,16 +35,69 @@
 </head>
 
 <body>
+<div id="loader">
+    <img id="video" src="/preloader/preloader.gif" alt="Loading...">
+</div>
+<style>
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 2s ease; 
+}
+
+#video {
+  width: 60%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+  #video {
+    width: 80%; 
+    max-width: none; 
+  }
+}
+</style>
+<script>
+var overlayloader = document.getElementById("loader");
+
+setTimeout(function () {
+  fadeOut(overlayloader);
+}, 1130);
+
+function fadeOut(element) {
+  var opacity = 1;
+  var last = +new Date();
+  var tick = function () {
+    opacity -= (new Date() - last) / 1130; 
+    element.style.opacity = opacity;
+    last = +new Date();
+
+    if (opacity > 0) {
+      requestAnimationFrame(tick);
+    } else {
+      element.style.display = 'none';
+    }
+  };
+
+  tick();
+}
+</script>
 
 	<div id="main-wrapper">
-
-
 		<div class="nav-header">
 			<a class="brand-logo" href="<?= base_url('/Dashboard')?>" >
 				<img class="logo-abbr" src="<?= base_url('/logo/logo_kasir.png')?>" alt="" style="width: 70px; height: 50px;">
 				<img class="brand-title" src="<?= base_url('/logo/logo_title.png/'.session()->get('text_sekolah'))?>" alt="" style="max-width: 100px; height: auto;">
 			</a>
-
 			<div class="nav-control">
 				<div class="hamburger">
 					<span class="line"></span><span class="line"></span><span class="line"></span>

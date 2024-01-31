@@ -48,4 +48,11 @@ class Home extends BaseController
         }
         return redirect()->to('/');
     }
+
+    public function logout()
+    {
+        $model = new M_model(); 
+        session()->destroy();
+        return redirect()->to('/');
+    }
 }
