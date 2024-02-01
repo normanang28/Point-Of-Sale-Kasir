@@ -144,4 +144,22 @@ class POS extends BaseController
         $model->hapus('barang_masuk',$where);
         return redirect()->to('/POS/pendataan_barang');
     }
+
+    public function kasir()
+    {
+        // $model=new M_model();
+        // $on='barang.maker_barang=user.id_user';
+        // $data['data']=$model->fusionOderBy('barang', 'user', $on, 'tanggal_barang');
+
+        // $id=session()->get('id');
+        // $where=array('id_user'=>$id);
+
+        // $where=array('id_user' => session()->get('id'));
+        // $data['foto']=$model->getRow('user',$where);
+
+        echo view('layout/header');
+        echo view('layout/menu');
+        echo view('POS/kasir/kasir');
+        echo view('layout/footer'); 
+    }
 }
