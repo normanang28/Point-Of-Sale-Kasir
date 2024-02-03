@@ -1,0 +1,21 @@
+ERROR - 2024-02-02 20:17:19 --> Unknown column 'barang_keluar.tgl_bm' in 'where clause'
+CRITICAL - 2024-02-02 20:17:19 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\POS_UKK\app\Controllers\Laporan.php(157): App\Models\M_model->filter_pendataan_barang('barang_keluar', '2023-11-03', '2024-02-03')
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\Laporan->print_pengeluaran_barang()
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-02-02 21:03:15 --> count(): Parameter must be an array or an object that implements Countable
+#0 C:\xampp\htdocs\POS_UKK\app\Views\dashboard\dashboard.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parame...', 'C:\\xampp\\htdocs...', 11, Array)
+#1 C:\xampp\htdocs\POS_UKK\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\POS_UKK\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\POS_UKK\system\Common.php(1089): CodeIgniter\View\View->render('dashboard/dashb...', Array, true)
+#4 C:\xampp\htdocs\POS_UKK\app\Controllers\My_Account.php(16): view('dashboard/dashb...')
+#5 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\My_Account->index()
+#6 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Account))
+#7 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}

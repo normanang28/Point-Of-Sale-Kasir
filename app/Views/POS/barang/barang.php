@@ -38,7 +38,7 @@
 				                                    <label class="form-label">Nama Barang<span style="color: black;"> :</span></label>
 				                                    <input type="text" id="nama_barang" name="nama_barang" class="form-control text-capitalize" placeholder="Nama Barang" autocomplete="on">
 				                                </div>
-				                                <label class="form-label">Harga Barang<span style="color: black;">:</span></label>    
+				                                <label class="form-label">Harga Barang<span style="color: black;"> :</span></label>    
 							                    <div class="input-group mb-3 input-basic">
 							                        <span class="input-group-text">$</span>
 							                        <input type="text" id="harga_barang" name="harga_barang" class="form-control text-capitalize" placeholder="Harga Barang"  autocomplete="on">

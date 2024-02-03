@@ -1,11 +1,14 @@
 <div class="deznav">
     <div class="deznav-scroll">
         <ul class="metismenu" id="menu">
+<?php  if(session()->get('id')>0) { ?>
         <li><a href="<?= base_url('/Dashboard')?>" class="ai-icon" aria-expanded="false">
                 <i class="fa-solid fa-house-lock" title="Dashboard"></i>
                 <span  class="nav-text">Dashboard</span>
             </a>
         </li>
+<?php }else{} ?>
+<?php  if(session()->get('level')== 1) { ?>
         <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
             <i class="fa-solid fa-chalkboard-user" title="User"></i>
             <span class="nav-text">User</span>
@@ -14,6 +17,8 @@
             <li><a href="<?= base_url('/Data_Master/petugas')?>">Data Petugas</a></li>
         </ul>
         </li>
+<?php }else{} ?>
+<?php  if(session()->get('level')== 1 || session()->get('level')== 2) { ?>
         <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
             <i class="fa-solid fa-hand-holding-dollar" title="Point Of Sale"></i>
             <span class="nav-text">Point Of Sale</span>
@@ -23,11 +28,15 @@
             <li><a href="<?= base_url('/POS/pendataan_barang')?>">Pendataan Barang</a></li>
         </ul>
         </li>
+<?php }else{} ?>
+<?php  if(session()->get('level')== 1 || session()->get('level')== 3) { ?>
         <li><a href="<?= base_url('/POS/kasir')?>" class="ai-icon" aria-expanded="false">
                 <i class="fa-solid fa-cash-register" title="Kasir"></i>
                 <span  class="nav-text">Kasir</span>
             </a>
         </li>
+<?php }else{} ?>
+<?php  if(session()->get('level')== 1 || session()->get('level')== 2) { ?>
         <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
             <i class="fa-solid fa-file-invoice-dollar" title="Laporan Point Of Sale"></i>
             <span class="nav-text">Laporan POS</span>
@@ -37,12 +46,15 @@
             <li><a href="<?= base_url('/Laporan/pengeluaran_barang')?>">Pengeluaran Barang</a></li>
         </ul>
         </li>
+<?php }else{} ?>
         <hr class="sidebar-divider">
+<?php  if(session()->get('id')>0) { ?>
         <li><a href="<?= base_url('/My_Account')?>" class="ai-icon" aria-expanded="false">
             <i class="fa-solid fa-user-secret" title="My Account"></i>
                 <span  class="nav-text">My Account</span>
             </a>
         </li>
+<?php }else{} ?>
         <li><a href="<?= base_url('/Home/logout')?>" class="ai-icon" aria-expanded="false">
             <i class="fa-solid fa-right-from-bracket" title="Log Out"></i>
             <span class="nav-text">Log Out</span>

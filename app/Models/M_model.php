@@ -171,6 +171,19 @@ class M_model extends model
 		)->getResult();
 	}
 
+	public function filter_pengeluaran_barang ($table, $awal,$akhir)
+	{
+		return $this->db->query(
+			"SELECT *
+			FROM ".$table."
+			join barang ON ".$table.".id_barang_barang = barang.id_barang
+			join user ON ".$table.".maker_bk = user.id_user
+			WHERE ".$table.".tgl_bk
+			BETWEEN '".$awal."'
+			AND '".$akhir."'"
+		)->getResult();
+	}
+
 	// public function filter_outbound_items ($table, $awal,$akhir)
 	// {
 	// 	return $this->db->query(
@@ -540,6 +553,16 @@ class M_model extends model
 	public function superOderBy($table1, $table2, $table3, $on, $on2, $column)
 	{
 		return $this->db->table($table1)->join($table2, $on)->join($table3, $on2)->orderBy($column, 'DESC')->get()->getResult();
+	}
+
+	public function sumData($table, $column)
+    {
+        return $this->db->table($table)->selectSum($column)->get()->getRowArray();
+    }
+    
+	public function search($table1, $table2, $table3, $on1, $on2, $column, $where)
+	{
+		return $this->db->table($table1)->join($table2, $on1)->join($table3, $on2)->groupStart()->like($column, $where)->groupEnd()->get()->getResult();
 	}
 
 	public function invoice ($table1, $table2, $table3, $on, $on2, $column, $where)

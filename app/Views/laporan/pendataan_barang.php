@@ -42,6 +42,11 @@
       background-color: #f2f2f2;
     }
 
+    td:nth-child(2) {
+      text-align: center;
+      text-transform: uppercase;
+    }
+
     td:nth-child(4) {
       text-align: center;
       text-transform: capitalize;
@@ -73,9 +78,9 @@
             ?>
             <tr>
               <td class="text-capitalize text-center"><?php echo $dataa->tgl_bm?></td>
-              <td class="text-capitalize text-center"><?php echo $dataa->kode_barang?></td>
+              <td class="text-uppercase text-center"><?php echo $dataa->kode_barang?></td>
               <td class="text-capitalize text-center"><?php echo $dataa->nama_barang?></td>
-              <td class="text-center text-capitalize text-dark text-success">+ <?php echo $dataa->stok?> Stok Masuk</td>
+              <td class="text-center text-capitalize text-dark text-success"><?php echo $dataa->stok?></td>
               <td class="text-capitalize text-center"><?php echo $dataa->nama_supplier?></td>
             </tr>
           <?php }?>

@@ -147,19 +147,60 @@ class POS extends BaseController
 
     public function kasir()
     {
-        // $model=new M_model();
-        // $on='barang.maker_barang=user.id_user';
-        // $data['data']=$model->fusionOderBy('barang', 'user', $on, 'tanggal_barang');
+        $model=new M_model();
+        $on='barang_keluar.id_barang_barang=barang.id_barang';
+        $on2='barang_keluar.maker_bk=user.id_user';
+        $data['data']=$model->superOderBy('barang_keluar', 'barang', 'user', $on, $on2, 'tanggal_bk');
 
-        // $id=session()->get('id');
-        // $where=array('id_user'=>$id);
+        $id=session()->get('id');
+        $where=array('id_user'=>$id);
 
-        // $where=array('id_user' => session()->get('id'));
-        // $data['foto']=$model->getRow('user',$where);
+        $where=array('id_user' => session()->get('id'));
+        $data['foto']=$model->getRow('user',$where);
 
-        echo view('layout/header');
+        $data['p']=$model->tampil('barang'); 
+
+        echo view('layout/header', $data);
         echo view('layout/menu');
         echo view('POS/kasir/kasir');
         echo view('layout/footer'); 
+    }
+
+    public function tambah_kasir()
+    {
+        $model = new M_model();
+        $id_barang = $this->request->getPost('id_barang');
+        $stok = $this->request->getPost('stok');
+        $cash = $this->request->getPost('cash');
+        $kembalian = $this->request->getPost('kembalian');
+        
+        $total = $cash - $kembalian;
+
+        $maker_bk = session()->get('id');
+        $data = array(
+            'id_barang_barang' => $id_barang,
+            'stok' => $stok,
+            'cash' => $cash,
+            'kembalian' => $kembalian,
+            'total' => $total,
+            'maker_bk' => $maker_bk
+        );
+
+        $model->simpan('barang_keluar', $data);
+        return redirect()->to('/POS/kasir');
+    }
+
+    public function hapus_barang_keluar($id)
+    {
+        $model = new M_model();
+
+        if (is_array($id)) {
+            $where = 'id_barang_keluar IN (' . implode(',', $id) . ')';
+        } else {
+            $where = ['id_barang_keluar' => $id];
+        }
+
+        $model->hapus('barang_keluar', $where);
+        return redirect()->to('/POS/kasir');
     }
 }

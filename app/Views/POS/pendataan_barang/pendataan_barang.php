@@ -85,7 +85,7 @@
 						<tr>
 							<td style="text-align: center;" class="text-uppercase"><?php echo $dataa->kode_barang?></td>
 							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->nama_barang?></td>
-							<td style="text-align: center;" class="text-capitalize text-info">+ <?php echo $dataa->stok?> Stok Masuk</td>
+							<td style="text-align: center;" class="text-capitalize text-info"><?php echo $dataa->stok?> Stok Masuk</td>
 							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->nama_supplier?></td>
 							<td style="text-align: center;">
                                 <a onclick="openDeleteModal('<?= base_url('/POS/hapus_barang_masuk/'.$dataa->id_barang_masuk )?>')">
