@@ -148,9 +148,11 @@ class POS extends BaseController
     public function kasir()
     {
         $model=new M_model();
+        $where2=array('username'=>session()->get('username'));
+
         $on='barang_keluar.id_barang_barang=barang.id_barang';
         $on2='barang_keluar.maker_bk=user.id_user';
-        $data['data']=$model->superOderBy('barang_keluar', 'barang', 'user', $on, $on2, 'tanggal_bk');
+        $data['data']=$model->superOderByWhere('barang_keluar', 'barang', 'user', $on, $on2, 'tanggal_bk', $where2);
 
         $id=session()->get('id');
         $where=array('id_user'=>$id);
@@ -186,21 +188,39 @@ class POS extends BaseController
             'maker_bk' => $maker_bk
         );
 
+        $data1 = array(
+            'id_barang_barang' => $id_barang,
+            'stok' => $stok,
+            'cash' => $cash,
+            'kembalian' => $kembalian,
+            'total' => $total,
+            'maker_bk' => $maker_bk
+        );
+
         $model->simpan('barang_keluar', $data);
+        $model->simpan('bk', $data1);
         return redirect()->to('/POS/kasir');
     }
 
-    public function hapus_barang_keluar($id)
+    public function hapus_kasir($id)
     {
-        $model = new M_model();
+        $model=new M_model();
+        $model_1=new M_model();
 
-        if (is_array($id)) {
-            $where = 'id_barang_keluar IN (' . implode(',', $id) . ')';
-        } else {
-            $where = ['id_barang_keluar' => $id];
-        }
+        $where=array('id_barang_keluar'=>$id);
+        $model->hapus('barang_keluar',$where);
 
-        $model->hapus('barang_keluar', $where);
+        $where=array('id_barang_keluar'=>$id);
+        $model_1->hapus('bk',$where);
         return redirect()->to('/POS/kasir');
+    }
+
+    public function print_invoice()
+    {
+        $model=new M_model();
+        $username = session()->get('username');
+        $data['data'] = $model->print_invoice('barang_keluar', $username);
+
+        echo view('POS/kasir/print_invoice',$data);
     }
 }

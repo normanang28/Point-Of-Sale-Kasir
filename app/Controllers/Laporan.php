@@ -154,7 +154,7 @@ class Laporan extends BaseController
         $model=new M_model();
         $awal= $this->request->getPost('awal');
         $akhir= $this->request->getPost('akhir');
-        $data['data']=$model->filter_pengeluaran_barang('barang_keluar',$awal,$akhir);
+        $data['data']=$model->filter_pengeluaran_barang('bk',$awal,$akhir);
         echo view('laporan/pengeluaran_barang',$data);
     }
 
@@ -163,7 +163,7 @@ class Laporan extends BaseController
         $model=new M_model();
         $awal= $this->request->getPost('awal');
         $akhir= $this->request->getPost('akhir');
-        $data['data']=$model->filter_pengeluaran_barang('barang_keluar',$awal,$akhir);
+        $data['data']=$model->filter_pengeluaran_barang('bk',$awal,$akhir);
 
         $dompdf = new\Dompdf\Dompdf();
         $dompdf->loadHtml(view('laporan/pengeluaran_barang',$data));
@@ -178,7 +178,7 @@ class Laporan extends BaseController
         $model = new M_model();
         $awal = $this->request->getPost('awal');
         $akhir = $this->request->getPost('akhir');
-        $data = $model->filter_pengeluaran_barang('barang_keluar', $awal, $akhir);
+        $data = $model->filter_pengeluaran_barang('bk', $awal, $akhir);
 
         $spreadsheet = new Spreadsheet();
 

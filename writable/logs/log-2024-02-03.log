@@ -1,0 +1,194 @@
+CRITICAL - 2024-02-03 01:39:12 --> syntax error, unexpected ';', expecting ')'
+#0 C:\xampp\htdocs\POS_UKK\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('POS/kasir')
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('POS/kasir')
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-02-03 02:55:54 --> Call to undefined function md5_to_text()
+#0 C:\xampp\htdocs\POS_UKK\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\POS_UKK\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\POS_UKK\system\Common.php(1089): CodeIgniter\View\View->render('My_Account/acco...', Array, true)
+#3 C:\xampp\htdocs\POS_UKK\app\Controllers\My_Account.php(26): view('My_Account/acco...')
+#4 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\My_Account->index()
+#5 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Account))
+#6 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-02-03 02:56:09 --> Call to undefined function md5_to_text()
+#0 C:\xampp\htdocs\POS_UKK\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\POS_UKK\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\POS_UKK\system\Common.php(1089): CodeIgniter\View\View->render('My_Account/acco...', Array, true)
+#3 C:\xampp\htdocs\POS_UKK\app\Controllers\My_Account.php(26): view('My_Account/acco...')
+#4 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\My_Account->index()
+#5 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Account))
+#6 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+ERROR - 2024-02-03 03:09:04 --> Unknown column 'id_user' in 'where clause'
+CRITICAL - 2024-02-03 03:09:04 --> Call to a member function getRow() on bool
+#0 C:\xampp\htdocs\POS_UKK\app\Controllers\My_Account.php(20): App\Models\M_model->getRow('petugas', Array)
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\My_Account->index()
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Account))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-02-03 03:09:25 --> Unknown column 'id_user_petugas' in 'where clause'
+CRITICAL - 2024-02-03 03:09:25 --> Call to a member function getRow() on bool
+#0 C:\xampp\htdocs\POS_UKK\app\Controllers\My_Account.php(20): App\Models\M_model->getRow('user', Array)
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\My_Account->index()
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Account))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-02-03 03:09:31 --> Unknown column 'id_petugas' in 'where clause'
+CRITICAL - 2024-02-03 03:09:31 --> Call to a member function getRow() on bool
+#0 C:\xampp\htdocs\POS_UKK\app\Controllers\My_Account.php(20): App\Models\M_model->getRow('user', Array)
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\My_Account->index()
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Account))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-02-03 03:11:01 --> Unknown column 'id_user' in 'where clause'
+CRITICAL - 2024-02-03 03:11:01 --> Call to a member function getRow() on bool
+#0 C:\xampp\htdocs\POS_UKK\app\Controllers\My_Account.php(16): App\Models\M_model->getRow('petugas', Array)
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\My_Account->index()
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Account))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-02-03 03:11:11 --> Unknown column 'id_user' in 'where clause'
+CRITICAL - 2024-02-03 03:11:11 --> Call to a member function getRow() on bool
+#0 C:\xampp\htdocs\POS_UKK\app\Controllers\My_Account.php(16): App\Models\M_model->getRow('petugas', Array)
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\My_Account->index()
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Account))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-02-03 03:11:27 --> Unknown column 'id_user' in 'where clause'
+CRITICAL - 2024-02-03 03:11:27 --> Call to a member function getRow() on bool
+#0 C:\xampp\htdocs\POS_UKK\app\Controllers\My_Account.php(18): App\Models\M_model->getRow('petugas', Array)
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\My_Account->index()
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Account))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-02-03 03:17:02 --> Unknown column 'id_user' in 'where clause'
+CRITICAL - 2024-02-03 03:17:02 --> Call to a member function getRow() on bool
+#0 C:\xampp\htdocs\POS_UKK\app\Controllers\My_Account.php(20): App\Models\M_model->getRow('petugas', Array)
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\My_Account->index()
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Account))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-02-03 03:17:11 --> Unknown column 'id_user_petugas' in 'where clause'
+CRITICAL - 2024-02-03 03:17:11 --> Call to a member function getRow() on bool
+#0 C:\xampp\htdocs\POS_UKK\app\Controllers\My_Account.php(20): App\Models\M_model->getRow('user', Array)
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\My_Account->index()
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Account))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-02-03 04:11:33 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\POS_UKK\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\POS_UKK\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\POS_UKK\app\Controllers\POS.php(207): CodeIgniter\Model->__call('filter_penarika...', Array)
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\POS->print_invoice()
+#4 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POS))
+#5 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2024-02-03 04:11:47 --> Table 'pos.transaksi_penarikan' doesn't exist
+CRITICAL - 2024-02-03 04:11:47 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\POS_UKK\app\Controllers\POS.php(207): App\Models\M_model->print_invoice('transaksi_penar...', 'super admin')
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\POS->print_invoice()
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POS))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-02-03 04:12:22 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+#0 C:\xampp\htdocs\POS_UKK\app\Controllers\POS.php(207): App\Models\M_model->print_invoice('transaksi_penar...', 'super admin')
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\POS->print_invoice()
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POS))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-02-03 04:12:23 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+#0 C:\xampp\htdocs\POS_UKK\app\Controllers\POS.php(207): App\Models\M_model->print_invoice('transaksi_penar...', 'super admin')
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\POS->print_invoice()
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POS))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-02-03 04:12:26 --> Table 'pos.transaksi_penarikan' doesn't exist
+CRITICAL - 2024-02-03 04:12:26 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\POS_UKK\app\Controllers\POS.php(207): App\Models\M_model->print_invoice('transaksi_penar...', 'super admin')
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\POS->print_invoice()
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POS))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-02-03 04:12:39 --> Table 'pos.transaksi_penarikan' doesn't exist
+CRITICAL - 2024-02-03 04:12:39 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\POS_UKK\app\Controllers\POS.php(207): App\Models\M_model->print_invoice('transaksi_penar...', 'super admin')
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\POS->print_invoice()
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POS))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-02-03 04:16:01 --> Table 'pos.transaksi_penarikan' doesn't exist
+CRITICAL - 2024-02-03 04:16:01 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\POS_UKK\app\Controllers\POS.php(207): App\Models\M_model->print_invoice('transaksi_penar...', 'super admin')
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\POS->print_invoice()
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POS))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-02-03 04:18:04 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\POS_UKK\app\Views\POS\kasir\print_invoice.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 79, Array)
+#1 C:\xampp\htdocs\POS_UKK\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\POS_UKK\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\POS_UKK\system\Common.php(1089): CodeIgniter\View\View->render('POS/kasir/print...', Array, true)
+#4 C:\xampp\htdocs\POS_UKK\app\Controllers\POS.php(210): view('POS/kasir/print...')
+#5 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\POS->print_invoice()
+#6 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POS))
+#7 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2024-02-03 04:20:08 --> Unknown column 'barang_keluar.id_user_petugas' in 'on clause'
+CRITICAL - 2024-02-03 04:20:08 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\POS_UKK\app\Controllers\POS.php(207): App\Models\M_model->print_invoice('barang_keluar', 'super admin')
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\POS->print_invoice()
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POS))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-02-03 04:20:42 --> Unknown column 'barang_keluar.id_user_petugas' in 'on clause'
+CRITICAL - 2024-02-03 04:20:42 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\POS_UKK\app\Controllers\POS.php(207): App\Models\M_model->print_invoice('barang_keluar', 'super admin')
+#1 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(832): App\Controllers\POS->print_invoice()
+#2 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\POS))
+#3 C:\xampp\htdocs\POS_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\POS_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\POS_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

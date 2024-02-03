@@ -111,11 +111,11 @@
 </script>
 
 <div class="col-md-7 col-sm-7 col-xs-7">
-    <button type="button" class="btn btn-info mb-2" data-bs-toggle="modal" data-bs-target="#calculatorModal">
-        <i class="fa-solid fa-calculator"></i> Kalkulator
-    </button><h1></h1>
+<button type="button" class="btn btn-info mb-2" data-bs-toggle="modal" data-bs-target="#calculatorModal">
+    <i class="fa-solid fa-calculator"></i> Kalkulator
+</button><h1></h1>
 
-    <div class="modal fade-up" id="calculatorModal" tabindex="-1" aria-labelledby="calculatorModalLabel" aria-hidden="true">
+<div class="modal fade-up" id="calculatorModal" tabindex="-1" aria-labelledby="calculatorModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-end">
         <div class="modal-content">
             <div class="modal-header">
@@ -127,20 +127,21 @@
                     <input type="text" id="display" class="form-control mb-2" disabled>
                     <div class="calculator-buttons">
                         <button class="btn btn-secondary" onclick="clearDisplay()">C</button>
+                        <button class="btn btn-secondary" onclick="calculatePercentage()">%</button>
+                        <button class="btn btn-secondary" onclick="toggleSign()">+/-</button>
                         <button class="btn btn-secondary" onclick="appendToDisplay('/')">&#247;</button>
-                        <button class="btn btn-secondary" onclick="appendToDisplay('*')">&#215;</button>
                         <button class="btn btn-secondary" onclick="appendToDisplay('7')">7</button>
                         <button class="btn btn-secondary" onclick="appendToDisplay('8')">8</button>
                         <button class="btn btn-secondary" onclick="appendToDisplay('9')">9</button>
-                        <button class="btn btn-secondary" onclick="appendToDisplay('-')">-</button>
+                        <button class="btn btn-secondary" onclick="appendToDisplay('*')">&#215;</button>
                         <button class="btn btn-secondary" onclick="appendToDisplay('4')">4</button>
                         <button class="btn btn-secondary" onclick="appendToDisplay('5')">5</button>
                         <button class="btn btn-secondary" onclick="appendToDisplay('6')">6</button>
-                        <button class="btn btn-secondary" onclick="appendToDisplay('+')">+</button>
+                        <button class="btn btn-secondary" onclick="appendToDisplay('-')">-</button>
                         <button class="btn btn-secondary" onclick="appendToDisplay('1')">1</button>
                         <button class="btn btn-secondary" onclick="appendToDisplay('2')">2</button>
                         <button class="btn btn-secondary" onclick="appendToDisplay('3')">3</button>
-                        <button class="btn btn-secondary btn-clear" onclick="clearDisplay()">C</button>
+                        <button class="btn btn-secondary" onclick="appendToDisplay('+')">+</button>
                         <button class="btn btn-secondary" onclick="appendToDisplay('0')">0</button>
                         <button class="btn btn-secondary" onclick="appendToDisplay('.')">.</button>
                         <button class="btn btn-secondary btn-equal" onclick="calculate()">=</button>
@@ -168,6 +169,32 @@
         }
     }
 
+    function toggleSign() {
+        let display = document.getElementById('display');
+        let currentValue = display.value;
+
+        if (currentValue !== '') {
+            if (currentValue.startsWith('-')) {
+                display.value = currentValue.slice(1);
+            } else {
+                display.value = '-' + currentValue;
+            }
+        }
+    }
+
+    function calculatePercentage() {
+        let display = document.getElementById('display');
+        let currentValue = display.value;
+
+        if (currentValue !== '') {
+            try {
+                display.value = eval(currentValue) / 100;
+            } catch (error) {
+                display.value = 'Error';
+            }
+        }
+    }
+
     document.addEventListener('keydown', function (event) {
         const key = event.key;
 
@@ -186,7 +213,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
 
-    <style>
+<style>
     .modal.fade-up .modal-dialog {
         position: fixed;
         bottom: 0; 
@@ -248,7 +275,7 @@
         background-color: #007bff;
         color: #ffffff;
     }
-    </style>
+</style>
 
     <div class="row" id="tableBody">
         <?php foreach ($p as $dataa): ?>       
@@ -327,38 +354,59 @@
                 const previousPageButton = document.getElementById('previousPageButton');
                 const nextPageButton = document.getElementById('nextPageButton');
 
-                const data = <?= json_encode($p) ?>; 
+                const data = <?= json_encode($p) ?>;
+                console.log(data);
+ 
                 const itemsPerPage = 8;
                 let currentPage = 1;
                 const totalPages = Math.ceil(data.length / itemsPerPage);
 
                 function displayDataOnPage(page) {
-                    tableBody.innerHTML = '';
+                        tableBody.innerHTML = '';
 
-                    const startIndex = (page - 1) * itemsPerPage;
-                    const endIndex = startIndex + itemsPerPage;
+                        const startIndex = (page - 1) * itemsPerPage;
+                        const endIndex = startIndex + itemsPerPage;
 
-                    for (let i = startIndex; i < endIndex && i < data.length; i++) {
-                        const gas = data[i];
-                        const row = `
-                            <div class="col-7 col-sm-7 col-md-7 col-lg-3 mb-5 mb-lg-0" data-aos="fade-left" data-aos-delay="100">
-                                <div class="media-1 position-relative">
-                                    <img src="/barang/default_brg.jpg" alt="Image" class="img-fluid">
-                                    <h1></h1>
-                                    <div class="d-flex align-items-center">
-                                        <div>
-                                            <h4 class="text-uppercase"><?php echo $dataa->kode_barang ?></h4>
-                                            <span class="text-uppercase">Rp <?php echo number_format($dataa->harga_barang, 2, ',', '.') ?></span>
-                                            <span class="text-capitalize" style="color: <?php echo ($dataa->jumlah < 0) ? 'red' : (($dataa->jumlah == 0) ? 'red' : 'inherit'); ?>">
-                                                Tersedia <?php echo $dataa->jumlah; ?>
-                                            </span>
+                        for (let i = startIndex; i < endIndex && i < data.length; i++) {
+                            const currentData = data[i];
+                            const row = `
+                                <div class="col-7 col-sm-7 col-md-7 col-lg-3 mb-5 mb-lg-0" data-aos="fade-left" data-aos-delay="100">
+                                    <div class="media-1 position-relative">
+                                        <img src="/barang/default_brg.jpg" alt="Image" class="img-fluid">
+                                        <h1></h1>
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <h4 class="text-uppercase">${currentData.kode_barang}</h4>
+                                                <span class="text-uppercase">Rp ${number_format(currentData.harga_barang, 2, ',', '.')}</span>
+                                                <span class="text-capitalize" style="color: ${currentData.jumlah < 0 ? 'red' : (currentData.jumlah == 0 ? 'red' : 'inherit')}">
+                                                    Tersedia ${currentData.jumlah}
+                                                </span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div><br>
-                            </div>
-                        `;
-                        tableBody.innerHTML += row;
+                                    </div><br>
+                                </div>
+                            `;
+                            tableBody.innerHTML += row;
+                        }
                     }
+
+
+                function number_format(number, decimals, decPoint, thousandsSep) {
+                    decimals = decimals || 0;
+                    number = parseFloat(number);
+
+                    if (!decPoint || !thousandsSep) {
+                        decPoint = '.';
+                        thousandsSep = ',';
+                    }
+
+                    var roundedNumber = Math.round(Math.abs(number) * ('1e' + decimals)) + '';
+                    var numbersString = (decimals ? roundedNumber.slice(0, decimals * -1) : roundedNumber) +
+                        (decimals ? decPoint + roundedNumber.slice(decimals * -1) : '');
+
+                    var formattedNumber = numbersString.replace(/\B(?=(\d{3})+(?!\d))/g, thousandsSep);
+
+                    return (number < 0 ? '-' : '') + formattedNumber;
                 }
 
                 function updatePageNumbers() {
@@ -396,7 +444,7 @@
 
             <div class="alert alert-info" role="alert" data-aos="fade-down" data-aos-delay="100">
                 <i class="fa-solid fa-triangle-exclamation"></i>
-                Untuk menghapus list barang, silakan pilih data yang ingin dihapus dan klik tombol merah.
+                Untuk mencetak invoice, silakan klik button berwarna biru dengan text "Print Invoice".
             </div>
             <style>
             @keyframes blink {
@@ -414,71 +462,18 @@
                 <a href="<?= base_url('POS/print_invoice')?>"><button type="button" class="btn btn-info mb-2">
                     <i class="fa-solid fa-print"></i> Print Invoice
                 </button></a>
-
-                <button type="button" class="btn btn-danger mb-2" id="deleteSelected">
-                    <i class="fa-solid fa-trash"></i>
-                </button>
             </div><br>
-
-            <div class="modal fade" id="delete_barang_keluar" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body text-center">
-                            <i class="fa-solid fa-triangle-exclamation" style="font-size: 80px; color: #FFA500;"></i>
-                            <h1></h1><br>
-                            <h5>Apakah anda yakin ingin menghapus data ini?</h5>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary light" data-bs-dismiss="modal" style="height: 56px; width: 26%; font-size: 16px">Kembali</button>
-                            <a id="deleteLinkBarangMasuk" href="#">
-                                <button type="button" class="btn btn-danger">Iya, Hapus</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-            <script>
-                function openDeleteModal(deleteLink) {
-                    document.getElementById('deleteLinkBarangMasuk').href = deleteLink;
-                    $('#delete_barang_keluar').modal('show');
-                }
-            </script>
-            <script>
-                $(document).ready(function() {
-                    $('#deleteSelected').on('click', function() {
-                        var checkedItems = $('.delete-checkbox:checked');
-                        if (checkedItems.length > 0) {
-                            var deleteLinks = [];
-                            checkedItems.each(function() {
-                                var deleteLink = $(this).data('id');
-                                deleteLinks.push(deleteLink);
-                            });
-
-                            console.log(deleteLinks); 
-
-                            var deleteLink = '<?= base_url('/POS/hapus_barang_keluar/') ?>' + '/' + deleteLinks.join('/');
-                            console.log(deleteLink);
-                            openDeleteModal(deleteLink);
-                        }
-                    });
-                });
-            </script>
 
             <div class="table-responsive">
                 <table id="example" class="display" style="min-width: 100%">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th style="text-align: center;">Kode</th>
                             <th style="text-align: center;">Nama Barang</th>
                             <th style="text-align: center;">QTY</th>
                             <th style="text-align: center;">Dibayar</th>
                             <th style="text-align: center;">Kembalian</th>
                             <th style="text-align: center;">Total</th>
+                            <th style="text-align: center;">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -486,15 +481,45 @@
                     $no=1;
                     foreach ($data as $dataa){?>
                         <tr>
-                            <td>
-                                <input type="checkbox" class="checkbox__input delete-checkbox" value="<?= $dataa->id_barang_keluar ?>" name="kasir[]" id="kasir_<?= $dataa->id_barang_keluar ?>" data-id="<?= $dataa->id_barang_keluar ?>"/>
-                            </td>
-                            <td style="text-align: center;" class="text-uppercase"><?php echo $dataa->kode_barang?></td>
                             <td style="text-align: center;" class="text-capitalize"><?php echo $dataa->nama_barang?></td>
                             <td style="text-align: center;" class="text-capitalize"><?php echo $dataa->stok?></td>
                             <td style="text-align: center;" class="text-capitalize">Rp <?php echo number_format($dataa->cash, 2, ',', '.'); ?></td>
                             <td style="text-align: center;" class="text-capitalize">Rp <?php echo number_format($dataa->kembalian, 2, ',', '.'); ?></td>
                             <td style="text-align: center;" class="text-capitalize">Rp <?php echo number_format($dataa->total, 2, ',', '.'); ?></td>
+                            <td style="text-align: center;">
+                                <a onclick="openDeleteModal('<?= base_url('/POS/hapus_kasir/'.$dataa->id_barang_keluar )?>')">
+                                    <button type="button" class="btn btn-danger">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </a>
+                            </td>
+                            <div class="modal fade" id="delete_barang" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body text-center">
+                                            <i class="fa-solid fa-triangle-exclamation" style="font-size: 80px; color: #FFA500;"></i>
+                                            <h1></h1><br>
+                                            <h5>Apakah anda yakin ingin menghapus data ini?</h5>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary light d-none d-sm-block" data-bs-dismiss="modal" style="height: 56px; width: 26%; font-size: 16px;">Kembali</button>
+                                            <a id="deleteLinkBarang" href="#">
+                                                <button type="button" class="btn btn-danger">Iya, Hapus</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+                            <script>
+                                function openDeleteModal(deleteLink) {
+                                    document.getElementById('deleteLinkBarang').href = deleteLink;
+                                    $('#delete_barang').modal('show');
+                                }
+                            </script>
                         </tr>
                     <?php }?>
                     </tbody>

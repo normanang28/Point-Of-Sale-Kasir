@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 03, 2024 at 04:05 AM
+-- Generation Time: Feb 03, 2024 at 11:44 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -42,15 +42,9 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`id_barang`, `kode_barang`, `nama_barang`, `jumlah`, `harga_barang`, `maker_barang`, `tanggal_barang`) VALUES
-(5, 'ltuf-01', 'laptop tuf gaming a15', '6', '17000000', 2, '2024-01-31 14:40:57'),
+(5, 'ltuf-01', 'laptop tuf gaming a15', '5', '17000000', 2, '2024-01-31 14:40:57'),
 (6, 'lmsi-01', 'laptop mSI GF63 Thin 12UCX', '10', '9900000', 2, '2024-01-31 14:42:53'),
-(7, 'ltuf-02', 'laptop tuf gaming f15', '2', '18000000', 2, '2024-01-31 14:43:35'),
-(8, 'hdwd-01', 'HARDISK WD PURPLE 1 TB', '0', '250000', 2, '2024-02-01 14:39:20'),
-(9, 'lacr-01', 'laptop acer nitro 10', '0', '10000000', 2, '2024-02-01 14:40:12'),
-(10, 'coba-01', 'coba 01', '0', '1000', 2, '2024-02-01 15:15:49'),
-(11, 'coba-02', 'coba 02', '0', '1000', 2, '2024-02-01 15:16:04'),
-(12, 'coba-03', 'coba 03', '0', '1000', 2, '2024-02-01 15:16:20'),
-(13, 'coba-04', 'coba 04', '0', '1000', 2, '2024-02-01 15:16:39');
+(7, 'ltuf-02', 'laptop tuf gaming f15', '1', '18000000', 2, '2024-01-31 14:43:35');
 
 -- --------------------------------------------------------
 
@@ -75,17 +69,17 @@ CREATE TABLE `barang_keluar` (
 --
 
 INSERT INTO `barang_keluar` (`id_barang_keluar`, `id_barang_barang`, `stok`, `total`, `cash`, `kembalian`, `maker_bk`, `tanggal_bk`, `tgl_bk`) VALUES
-(2, 5, '1', '17000000', '17000000', '0', 2, '2024-02-01 18:16:45', '2024-02-01');
+(55, 7, '1', '18000000', '18000000', '0', 2, '2024-02-03 17:36:01', '2024-02-03');
 
 --
 -- Triggers `barang_keluar`
 --
 DELIMITER $$
-CREATE TRIGGER `HPUS_BK` AFTER DELETE ON `barang_keluar` FOR EACH ROW update barang set jumlah = jumlah-old.stok WHERE id_barang = old.id_barang_barang
+CREATE TRIGGER `HPUS_BK` AFTER DELETE ON `barang_keluar` FOR EACH ROW update barang set jumlah = jumlah + old.stok WHERE id_barang = old.id_barang_barang
 $$
 DELIMITER ;
 DELIMITER $$
-CREATE TRIGGER `TMBH_BK` AFTER INSERT ON `barang_keluar` FOR EACH ROW UPDATE barang SET jumlah = jumlah + new.stok WHERE id_barang = new.id_barang_barang
+CREATE TRIGGER `TMBH_BK` AFTER INSERT ON `barang_keluar` FOR EACH ROW UPDATE barang SET jumlah = jumlah - new.stok WHERE id_barang = new.id_barang_barang
 $$
 DELIMITER ;
 
@@ -125,6 +119,31 @@ DELIMITER $$
 CREATE TRIGGER `TMBH_BM` AFTER INSERT ON `barang_masuk` FOR EACH ROW UPDATE barang SET jumlah = jumlah + new.stok WHERE id_barang = new.id_barang_barang
 $$
 DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bk`
+--
+
+CREATE TABLE `bk` (
+  `id_barang_keluar` int(4) NOT NULL,
+  `id_barang_barang` int(4) NOT NULL,
+  `stok` varchar(255) NOT NULL,
+  `total` varchar(255) NOT NULL,
+  `cash` varchar(255) NOT NULL,
+  `kembalian` varchar(255) NOT NULL,
+  `maker_bk` int(4) NOT NULL,
+  `tanggal_bk` datetime NOT NULL DEFAULT current_timestamp(),
+  `tgl_bk` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `bk`
+--
+
+INSERT INTO `bk` (`id_barang_keluar`, `id_barang_barang`, `stok`, `total`, `cash`, `kembalian`, `maker_bk`, `tanggal_bk`, `tgl_bk`) VALUES
+(55, 7, '1', '18000000', '18000000', '0', 2, '2024-02-03 17:36:01', '2024-02-03');
 
 -- --------------------------------------------------------
 
@@ -198,6 +217,12 @@ ALTER TABLE `barang_masuk`
   ADD PRIMARY KEY (`id_barang_masuk`);
 
 --
+-- Indexes for table `bk`
+--
+ALTER TABLE `bk`
+  ADD PRIMARY KEY (`id_barang_keluar`);
+
+--
 -- Indexes for table `petugas`
 --
 ALTER TABLE `petugas`
@@ -225,13 +250,19 @@ ALTER TABLE `barang`
 -- AUTO_INCREMENT for table `barang_keluar`
 --
 ALTER TABLE `barang_keluar`
-  MODIFY `id_barang_keluar` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_barang_keluar` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT for table `barang_masuk`
 --
 ALTER TABLE `barang_masuk`
   MODIFY `id_barang_masuk` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `bk`
+--
+ALTER TABLE `bk`
+  MODIFY `id_barang_keluar` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT for table `petugas`

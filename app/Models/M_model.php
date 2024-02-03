@@ -855,4 +855,14 @@ class M_model extends model
 	{
 		return $this->db->table($table1)->join($table2, $on)->join($table3, $on2)->getWhere($where)->getResult();
 	}
+
+	public function print_invoice($table, $username) {
+	    return $this->db->query(
+	        "SELECT *
+	        FROM ".$table."
+	        JOIN barang ON ".$table.".id_barang_barang=barang.id_barang
+	        JOIN user ON ".$table.".maker_bk=user.id_user
+	        WHERE user.username = '".$username."'"
+	    )->getResult();
+	}
 }
